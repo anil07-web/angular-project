@@ -4,7 +4,7 @@
 }
 .footer{
    
-        margin:20px;
+        /* margin:20px; */
       background-color:darkred;
       color: white;
       text-align: center;
@@ -19,4 +19,12 @@
     
    
 }
+.style1{
+    color: blue;
+    font-size:40px;
+     padding-top: 20px;
+     font-style: italic;
+     text-decoration: underline=none;
+}
+
 

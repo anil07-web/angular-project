@@ -1,31 +1,39 @@
 <div class="container" style="margin-top: 3px;">
     <nav class=" navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" style="color: crimson; padding: 10px;" href="#">SoulMate Application</a>
+            <a class="navbar-brand" style="color: crimson; padding: 10px;" href="#">SoulMate Application</a>
         </div>
-      </nav>
-       <div class="row mt-4">
-    <div class="col-md-2" style="color: aqua;font-style: italic; font-size: 17px;">
-       Favourite SoulMate
-    </div>
-    <div class="col-md-6">
-        <div class="card mt-4" style="width: 14rem;" >
-            <span class="card-body">
-                <h5 class="card-title">Profile</h5>
-                <!-- <p class="card-text">Name: {{profile?.firstName}} </p>
-                <p class="card-text">Gender:{{profile?.gender}}</p>
-                <p class="card-text">Age: {{profile?.age}} </p>
-                <app-landingview (child Event)="profile=$event"></app-landingview> -->
-                <button type="button" class="btn btn-success">Remove</button>
-            </span>
+    </nav>
+    <div class="row mt-4">
+        <div class="col-md-2" style="color: aqua;font-style: italic; font-size: 17px;">
+            Favourite SoulMate
+        </div>
+          
+            <div class="flex">
+                <div class="row" *ngFor="let list of favourites">
+                    <div style="margin-top: 10px;margin-left: 15px;">
+                        <div class="card mt-4" style="width: 14rem;">
+                            <span class="card-body">
+                                <h5 class="card-title" style="color: darkmagenta;">Profile &#10084;</h5>
+                                <p class="card-text">Id:{{list.id}}</p>
+                                <p class="card-text">Name:{{list.firstName}} </p>
+                                <p class="card-text">Gender:{{list.gender}}</p>
+                                <p class="card-text">Age: {{list.age}}</p>
+                                <button type="button" class="btn btn-success"
+                                    (click)="removeUser(list.id)">Remove</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             
+
         </div>
-    </div>
-        <div style="color: brown;">
-            <a class="nav-link"class="btn btn-success" style="border-radius: 10px; margin-left: 90px;" routerLink="/">Home</a>
+        <div style="color: brown;margin-left: 400px;"  >
+            <a class="nav-link" class="btn btn-success" style="border-radius: 10px; margin-left: 90px;"
+                routerLink="/">Home</a>
         </div>
     </div>
     <div class="footer">
         Copyrights@SoulMate
-   </div>
+    </div>
 </div>
